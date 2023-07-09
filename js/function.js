@@ -1,0 +1,109 @@
+let profile = document.querySelector("#imageProfile");
+profile.setAttribute("src", "src/Profileuser.png");
+
+let botonApagado = document.querySelectorAll("i.bi.bi-circle");
+let botonEncendido = document.querySelectorAll("i.bi.bi-circle-fill");
+let colorDocumento = document.querySelector("link.tema");
+let temaEstilo = colorDocumento.getAttribute('href'); 
+
+
+let botonRedInactivo = document.querySelector(".colorRed i.bi.bi-circle");
+let botonRedActivo = document.querySelector(".colorRed i.bi.bi-circle-fill");
+function colorRed() {
+	let hojaEstilo = colorDocumento.getAttribute('href');
+	switch (hojaEstilo) {
+		case 'style/style.css':
+			colorDocumento.setAttribute('href', 'style/styleRed.css');
+			botonRedInactivo.style.display = "none";
+			botonRedActivo.style.display = "block";
+			break;
+		case 'style/styleBlue.css':
+			colorDocumento.setAttribute('href', 'style/styleRed.css');
+			botonRedInactivo.style.display = "none";
+			botonRedActivo.style.display = "block";
+			break;
+		case 'style/styleYellow.css':
+			colorDocumento.setAttribute('href', 'style/styleRed.css');
+			botonRedInactivo.style.display = "none";
+			botonRedActivo.style.display = "block";
+			break;
+
+		default:
+			colorDocumento.setAttribute('href', 'style/style.css');
+			botonRedInactivo.style.display = "block";
+			botonRedActivo.style.display = "none";
+			break;
+			
+	}
+
+	botonBlueInactivo.style.display = "block";
+	botonBlueActivo.style.display = "none";
+	botonYellowInactivo.style.display = "block";
+	botonYellowActivo.style.display = "none";
+}
+
+let botonBlueInactivo = document.querySelector(".colorBlue i.bi.bi-circle");
+let botonBlueActivo = document.querySelector(".colorBlue i.bi.bi-circle-fill");
+
+function colorBlue() {
+	let hojaEstilo = colorDocumento.getAttribute('href');
+	switch (hojaEstilo) {
+		case 'style/style.css':
+			colorDocumento.setAttribute('href', 'style/styleBlue.css');
+			botonBlueInactivo.style.display = "none";
+			botonBlueActivo.style.display = "block";
+			break;
+		case 'style/styleRed.css':
+			colorDocumento.setAttribute('href', 'style/styleBlue.css');
+			botonBlueInactivo.style.display = "none";
+			botonBlueActivo.style.display = "block";
+			break;
+		case 'style/styleYellow.css':
+			colorDocumento.setAttribute('href', 'style/styleBlue.css');
+			botonBlueInactivo.style.display = "none";
+			botonBlueActivo.style.display = "block";
+			break;
+		default:
+			colorDocumento.setAttribute('href', 'style/style.css');
+			botonBlueInactivo.style.display = "block";
+			botonBlueActivo.style.display = "none";
+			break;
+	}
+	botonRedInactivo.style.display = "block";
+	botonRedActivo.style.display = "none";
+	botonYellowInactivo.style.display = "block";
+	botonYellowActivo.style.display = "none";
+}
+
+let botonYellowInactivo = document.querySelector(".colorYellow i.bi.bi-circle");
+let botonYellowActivo = document.querySelector(".colorYellow i.bi.bi-circle-fill");
+
+function colorYellow() {
+	let hojaEstilo = colorDocumento.getAttribute('href');
+	switch (hojaEstilo) {
+		case 'style/style.css':
+			colorDocumento.setAttribute('href', 'style/styleYellow.css');
+			botonYellowInactivo.style.display = "none";
+			botonYellowActivo.style.display = "block";
+			break;
+		case 'style/styleRed.css':
+			colorDocumento.setAttribute('href', 'style/styleYellow.css');
+			botonYellowInactivo.style.display = "none";
+			botonYellowActivo.style.display = "block";
+			break;
+		case 'style/styleBlue.css':
+			colorDocumento.setAttribute('href', 'style/styleYellow.css');
+			botonYellowInactivo.style.display = "none";
+			botonYellowActivo.style.display = "block";
+			break;
+		default:
+			colorDocumento.setAttribute('href', 'style/style.css');
+			botonYellowInactivo.style.display = "block";
+			botonYellowActivo.style.display = "none";
+			break;
+	}
+	botonRedInactivo.style.display = "block";
+	botonRedActivo.style.display = "none";
+	botonBlueInactivo.style.display = "block";
+	botonBlueActivo.style.display = "none";
+}
